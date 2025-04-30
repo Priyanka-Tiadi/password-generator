@@ -1,0 +1,176 @@
+body, html {
+  height: 100%;
+  margin: 10;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  background: #fff;
+  width: 600px; /* Fixed width */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.password-display {
+  background-color: #f0f5f0;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-text {
+  font-size: 1.2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 80%;
+}
+
+.password-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Divider Section for Password Strength */
+.divider {
+  height: 5px;
+  background-color: #e0e0e0; /* Default background for the strength meter */
+  margin: 1rem 0;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth width and color transition */
+}
+
+.divider.red {
+  background-color: red; /* Weak password strength */
+}
+
+.divider.orange {
+  background-color: orange; /* Medium password strength */
+}
+
+.divider.green {
+  background-color: green; /* Strong password strength */
+}
+
+.customize-section {
+  margin-top: 1rem;
+}
+
+.customize-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.length-control label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.length-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.length-input input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  text-align: center;
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+}
+
+.length-input input[type="range"] {
+  flex-grow: 0;
+}
+
+.options {
+  margin-top: 1.5rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.option input[type="checkbox"] {
+  accent-color: red;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.option span {
+  font-size: 1rem;
+  color: #333;
+}
+.copy-button {
+  background-color: #0a7f49;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+.copy-button:hover {
+  background-color: #075c33;
+}
+@media screen and (max-width: 480px) {
+  body, html {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .main-container {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .password-text {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .password-icons {
+    gap: 10px;
+    font-size: 1.2rem;
+  }
+
+  .length-input {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .length-input input[type="range"] {
+    width: 100%;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .copy-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+  }
+}
+
